@@ -1,6 +1,6 @@
 # Go Study
 
->Golang的学习笔记，Version:1.11.1 darwin/amd64，OS:macOS
+>Version:1.11.1 darwin/amd64，OS:macOS，Author:Dubby
 
 ## Go by Example
 

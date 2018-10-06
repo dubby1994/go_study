@@ -11,14 +11,12 @@
 + Arrays,Slices,Maps,Range
 + Functions,Multiple Return Values,Variadic Functions,Closures,Recursion
 + Pointers,Structs,Methods,Interfaces
-+ Errors
 + Goroutines,Channels,Channel Buffering,Channel Synchronization,Channel Directions
 + Select,Timeouts,Non-Blocking Channel Operations,Closing Channels,Range over Channels
 + Timers,Tickers,Worker Pools,Rate Limiting
 + Atomic Counters,Mutexes,Stateful Goroutines
 + Sorting,Sorting by Functions
-+ Panic
-+ Defer
++ Panic,Errors,Defer
 + Collection Functions,String Functions,String Formatting
 + Regular Expressions,JSON,Time,Epoch,Time Formatting / Parsing,Random Numbers,Number Parsing
 + URL Parsing,SHA1 Hashes,Base64 Encoding

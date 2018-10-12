@@ -40,11 +40,33 @@ func main() {
 	data = Insert("go_key", "go_value", db)
 	fmt.Println(*data)
 
+	fmt.Println("========Delete========")
+	err = Delete(data.Id, db)
+	fmt.Println(err)
+
 	fmt.Println("========UpdateById========")
 	data = QueryById(2, db)
 	prefix := fmt.Sprintf("update-%d-", time.Now().UnixNano()/1000%10000)
 	data = UpdateById(data.Id, prefix+"dubby", prefix+"www.dubby.cn", db)
 	fmt.Println(*data)
+}
+
+func Delete(id int64, db *sql.DB) error {
+	stmtOut, err := db.Prepare("DELETE FROM `data` WHERE id = ?")
+	if err != nil {
+		panic(err.Error())
+	}
+	defer stmtOut.Close()
+
+	result, err := stmtOut.Exec(id)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	if rowNum, err := result.RowsAffected(); err != nil || rowNum != int64(1) {
+		panic("delete error")
+	}
+	return nil
 }
 
 func Insert(key string, value string, db *sql.DB) *Data {

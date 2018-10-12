@@ -8,7 +8,7 @@ import (
 )
 
 func (data Data) String() string {
-	return fmt.Sprintf("id:%d key:%s value:%s\n[createTime:%d updateTime:%d]\n",
+	return fmt.Sprintf("%d\t%s\t%s\n[createTime:%d updateTime:%d]\n",
 		data.Id, data.Key, data.Value, data.CreateTime.Unix(), data.UpdateTime.Unix())
 }
 

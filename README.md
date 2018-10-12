@@ -23,3 +23,11 @@
 + Reading Files,Writing Files
 + Line Filters,Command-Line Arguments,Command-Line Flags,Environment Variables
 + Spawning Processes,Exec'ing Processes,Signals,Exit
+
+## MySQL
+
+>github.com/go-sql-driver/mysql
+
+## Redis
+
+>github.com/go-redis/redis

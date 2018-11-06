@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "github.com/go-sql-driver/mysql"
 	"database/sql"
-	"time"
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
+	"time"
 )
 
 func (data Data) String() string {
